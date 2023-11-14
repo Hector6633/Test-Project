@@ -1,0 +1,214 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>index</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+  </head>
+  <body background="{% static 'images/banner-bg.png' %}">
+    	<!-- header section start -->
+	<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">GameBook</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'txtmypc' %}">Test My Pc</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Others 
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="{% url 'store' %}">Game Store</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="{% url 'onlinegames' %}">Online Games</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" aria-disabled="true">Rate My GameBook</a>
+        </li>
+      </ul>
+      <form method="get" class="d-flex" role="search">
+        <input class="form-control me-2" type="text" name="query" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success"  type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+<div class="price_text text-center mb-2 mt-1">
+  <span class="text"  style="color: #ffffff;" >Online</span>
+  <span  class="text"  style="color:  #ffffff;">Games</span>
+  </div>
+
+<div>
+
+
+  <div class="container text-center mb-4">
+    <div class="row">
+      <div class="col">
+        <div class="card mt-3" style="width: 18rem;">
+          <img src="{% static 'images/powerpamplona360x100Min.png' %}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">PowerPamplona</h5>
+            <p class="card-text"></p>
+            <a href="https://www.friv.com/z/games/powerpamplona/game.html" class="btn btn-outline-info">Play</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mt-3" style="width: 18rem;">
+          <img src="{% static 'images/tictactoexxo360x100Min.png' %}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Tictactoexxo</h5>
+            <p class="card-text"></p>
+            <a href="https://www.friv.com/z/games/tictactoexxo/game.html" class="btn btn-outline-info">Play</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mt-3" style="width: 18rem;">
+          <img src="{% static 'images/4colors360x100Min.png' %}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">4colors</h5>
+            <p class="card-text"></p>
+            <a href="https://www.friv.com/z/games/4colors/game.html" class="btn btn-outline-info">Play</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container text-center mb-4 mt-2">
+    <div class="row">
+      <div class="col">
+        <div class="card mt-3" style="width: 18rem;">
+          <img src="{% static 'images/deathchase360x100Min.png' %}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">DeathChase</h5>
+            <p class="card-text"></p>
+            <a href="https://www.friv.com/z/games/deathchase/game.html" class="btn btn-outline-info">Play</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mt-3" style="width: 18rem;">
+          <img src="{% static 'images/bobtherobber360x100Min.png' %}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">BobTheRobbery</h5>
+            <p class="card-text"></p>
+            <a href="https://www.friv.com/z/games/bobtherobber/game.html" class="btn btn-outline-info">Play</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mt-3" style="width: 18rem;">
+          <img src="{% static 'images/ultimateoffroadcars2360x100Min.png' %}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">UltimateOffroadCars2</h5>
+            <p class="card-text"></p>
+            <a href="https://www.friv.com/z/games/ultimateoffroadcars2/game.html" class="btn btn-outline-info">Play</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container text-center mb-4 mt-2">
+    <div class="row">
+      <div class="col">
+        <div class="card mt-3" style="width: 18rem;">
+          <img src="{% static 'images/penaltychallenge360x100Min.png' %}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">PenaltyChallenge</h5>
+            <p class="card-text"></p>
+            <a href="https://www.friv.com/z/games/penaltychallenge/game.html" class="btn btn-outline-info">Play</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mt-3" style="width: 18rem;">
+          <img src="{% static 'images/3dnightcity2playerracing360x100Min.png' %}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">3D Nightcity2playerracing</h5>
+            <p class="card-text"> </p>
+            <a href="https://www.friv.com/z/games/3dnightcity2playerracing/game.html" class="btn btn-outline-info">Play</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mt-3" style="width: 18rem;">
+          <img src="{% static 'images/motox3mwinter360x100Min.png' %}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Motox3Mwinter</h5>
+            <p class="card-text"></p>
+            <a href="https://www.friv.com/z/games/motox3mwinter/game.html" class="btn btn-outline-info">Play</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+
+ 
+
+<div class="section_footer bg-dark text-white">
+  <div class="container"> 
+      <div class="footer_section_2">
+        <div class="row">
+            <div class="col-sm-6 col-md-6 col-lg-3">
+              <h2 class="account_text">About Us</h2>
+              <p class="ipsum_text_2">GAMEBOOK CAN INFORM ABOUT GAMES SPEC ON DIFFERENT PLATFORMS AND COMPATIABLE WITH  DEVICES</p>
+            </div>
+            <div class="col-sm-6 col-md-6 col-lg-3">
+              <h2 class="account_text">Useful Link</h2>
+              <div class="useful_link">
+                <ul>
+                  <li><a href="#">Video games</a></li>
+                  <li><a href="#">Remote control</a></li>
+                  <li><a href="#">3d controller</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-6 col-lg-3">
+            <h2 class="account_text">Contact Us</h2>
+            <p class="ipsum_text_2">+71 3693 8565 4586 </p>
+            </div>
+      <div class="col-sm-6 col-md-6 col-lg-3">
+        <h2 class="account_text">Newsletter</h2>
+        <input type="btn btn-outline-success" class="email_text" placeholder="Enter Your Email" name="Enter Your Email">
+        <button class="subscribr_bt">SUBSCRIBE</button>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <div class="social_icon bg-dark d-flex " id="social" >
+    
+      <a href="#"><img src="{% static 'images/fb-icon.png' %}"></a>
+      <a href="#"><img src="{% static 'images/twitter-icon.png' %}"></a>
+      <a href="#"><img src="{% static 'images/linkdin-icon.png' %}"></a>
+      <a href="#"><img src="{% static 'images/instagram-icon.png' %}"></a>
+    </div>
+  
+</div>
+</div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+   
+  </body>
+</html>

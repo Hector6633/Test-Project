@@ -1,0 +1,201 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>index</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+  </head>
+  <body>
+    	<!-- header section start -->
+	<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">GameBook</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'txtmypc' %}">Test My Pc</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Others 
+          </a>
+          <ul class="dropdown-menu ">
+            <li><a class="dropdown-item" href="{% url 'games' %}">Games</a></li>
+            <li><a class="dropdown-item" href="{% url 'store' %}">Gaming Store</a></li>
+            <li><a class="dropdown-item" href="{% url 'onlinegames' %}">Online Games</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a style="text-decoration: none;" href="{% url 'signout' %}"><button class="btn btn-outline-danger">Sign Out</button></a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a style="text-decoration: none;" href="{% url 'signout' %}"><button class="btn btn-outline-success">Sign Up</button></a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'account' %}" aria-enabled="true">How Many?</a>
+        </li>
+      </ul>
+      <form method="get" class="d-flex" role="search">
+        <input class="form-control me-2" type="text" name="query" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+<div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="{% static 'images/1253868.png' %}" class="d-block w-100 " alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5><strong>GAME THINGS</strong></h5>
+        <p>I don't Need Any Therapy I Just Need My Vedio Games</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'images/VQvJr3.jpg' %}" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>TRY AGAIN TO WIN</h5>
+        <p>Failure Does Not Mean Gameover It Means Try Again With New Experience</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'images/4k-ps4-title-logo-qo6nz8qzm0dp3i9b.jpg' %}" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>GOOD VIBE</h5>
+        <p>Relaxing When The Game Mode Turn On</p>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+<div class="price_text text-center mb-2 mt-1">
+  {% if user %}
+  <h3>Hello {{user.username}}</h3>
+  {% endif %}
+  {% for recents in recent %}
+   <h3 class="mt-1">You edited last time in {{recents.username}}</h3>
+  {% endfor %}
+  <span class="text"  style="color: #000408;" >Our</span>
+  <span  class="text"  style="color:  #5ca0e9;">Products</span>
+  </div>
+
+<div class="container"><marquee behavior="d-flex" direction="laptop"><h3 style="margin: auto; color: #030000;">you visited GameBook {{visits}} times</h3></marquee></div>
+  <div class="about_section layout_padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="image_2"><img src="{% static 'images/img-6.png' %}"></div>
+        </div>
+        <div class="col-md-6 border border-primary shadow-lg p-3 mb-5 bg-body-tertiary rounded-4">
+          <h1 class="about_text"><span  class="badge bg-dark"  style="color:  #5ca0e9;">SERVICES</span></h1>
+          <p class="para lh-base text-start fs-2 align-middle fw-medium">We provides different vedio games information and specifications to play on your machine.<br>You can search for any game specs and features.<br>You can buy our games and controlers in our store.<br>You can enjoy your woderfull gaming experiences.<br></p>
+          <div class="shop_bt_2"><a href="{% url 'store' %}"><button class="btn btn-outline-info">Shop now</button></a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+
+  <div class="contact_section layout_padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="email_box">
+                    <div class="input_main">
+                       <div class="container border border-primary shadow-lg p-3 mb-5 bg-body-tertiary rounded-4 mt-2">
+                       <h1><strong>Can I Run It?</strong></h1>  
+                       <p><strong>System requirements site to check your system, find games that can run on your computer, rate your PC and get great upgrade advice.</strong></p>
+                      <h1><strong>What are my PC specs?</strong> </h1>
+<p>Tell us what is in your computer by inputting your details or just click <strong>Test My PC</strong> My PC to use our easy, free automatic PC spec checker.</p>
+<h1><strong>What games can my PC run?</strong></h1>
+<p>We track desktop PCs and can also tell you what games your <strong>laptop</strong> can run - from our list of over 33,108 PC games.</p>
+
+<h1><strong>Rate my PC</strong></h1>
+Rank your computer in seconds with our <strong>GameBook</strong> Rating. Take the test and grab a free forum signature.
+
+<h1><strong>PC Upgrade checker</strong></h1>
+What should you upgrade on your PC for gaming? CPU, RAM, hard drive or graphics card. Our test gives advice.
+<div class="mt-2"><a href="{% url 'txtmypc' %}"><button class="btn btn-outline-info">TEST MY PC</button> </a></div> 
+
+                       </div> 
+                               
+                    </div>
+                 </div>
+        </div>
+        
+        <div class="col-md-6 mb-2">
+          <div class="img2 "><img src="{% static 'images/img-2.png' %}"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+
+
+<div class="section_footer bg-dark text-white">
+  <div class="container"> 
+      <div class="footer_section_2">
+        <div class="row">
+            <div class="col-sm-6 col-md-6 col-lg-3">
+              <h2 class="account_text">About Us</h2>
+              <p class="ipsum_text_2">GAMEBOOK CAN INFORM ABOUT GAMES SPEC ON DIFFERENT PLATFORMS AND COMPATIABLE WITH  DEVICES</p>
+            </div>
+            <div class="col-sm-6 col-md-6 col-lg-3">
+              <h2 class="account_text">Useful Link</h2>
+              <div class="useful_link">
+                <ul>
+                  <li><a style="text-decoration:none" href="#">Video games</a></li>
+                  <li><a style="text-decoration:none" href="#">Remote control</a></li>
+                  <li><a style="text-decoration:none" href="#">3d controller</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-6 col-lg-3">
+            <h2 class="account_text">Contact Us</h2>
+            <p class="ipsum_text_2">+71 3693 8565 4586<br>+91 9037702187<br>+11 848 5444 441 </p>
+            </div>
+      <div class="col-sm-6 col-md-6 col-lg-3">
+        <h2 class="account_text">Support GameBook</h2>
+        <input  class="email_text" type="email" placeholder="Enter Your Email" name="Enter Your Email">
+        <button class="subscribr_bt">SUBSCRIBE</button>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <div class="social_icon bg-dark d-flex align-middle" id="social" >
+    
+      <a href="https://www.facebook.com/"><img src="{% static 'images/fb-icon.png' %}"></a>
+      <a href="https://twitter.com/?lang=en"><img src="{% static 'images/twitter-icon.png' %}"></a>
+      <a href="https://in.linkedin.com/"><img src="{% static 'images/linkdin-icon.png' %}"></a>
+      <a href="https://www.instagram.com/"><img src="{% static 'images/instagram-icon.png' %}"></a>
+    </div>
+  
+</div>
+</div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+  </body>
+</html>
