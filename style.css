@@ -1,0 +1,16 @@
+.form{
+    width: 300px;
+    height: 300px;
+    /* display: flex; */
+    align-items: center;
+    display: grid;
+    font-size: larger;
+    font-family: 'Times New Roman', Times, serif;
+    color: tomato;
+    background-color: thistle;
+    border: 3px solid rgb(225, 28, 243);
+    place-items: center;
+    margin-top: 9%;
+    margin-left: 40%;
+}
+
